@@ -1,0 +1,15 @@
+{
+  "name": "webpack_esimport_cjsexport",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "import-from-mixed-source": "webpack --context . --entry ./import-from-mixed-source.js --output-filename mixed.output.js",
+    "import-from-unmixed-source": "webpack --context . --entry ./import-from-unmixed-source.js --output-filename unmixed.output.js",
+    "go": "yarn run import-from-unmixed-source && yarn run import-from-mixed-source"
+  },
+  "dependencies": {
+    "cowsay": "^1.2.1",
+    "webpack": "^3.5.6"
+  }
+}
